@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smartphone Data</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Average Smartphone Launch Price by Company</h1>
+
+  <!-- filters -->
+  <div id="controls">
+    <label for="viewFilter">View:</label>
+    <select id="viewFilter">
+      <option value="bar">Current Year View</option>
+      <option value="line">Price Trend Over Time</option>
+    </select>
+
+    <label for="yearFilter">Launch Year:</label>
+    <select id="yearFilter"></select>
+
+    <label for="batteryFilter">Battery Capacity:</label>
+    <select id="batteryFilter">
+      <option value="All">All</option>
+      <option value="Low">Low (< 3000 mAh) </option>
+      <option value="Medium">Medium (3000-5000 mAh)</option>
+      <option value="High">High (> 5000 mAh)</option>
+    </select>
+
+    <label for="ramFilter">RAM:</label>
+    <select id="ramFilter">
+      <option value="All">All</option>
+      <option value="4">4GB</option>
+      <option value="6">6GB</option>
+      <option value="8">8GB</option>
+      <option value="12">12GB</option>
+    </select>
+  </div>
+
+
+  <!-- Visualizations -->
+  <div id="chartContainer" class="chart-container">
+    <svg id="priceChart" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet"></svg>
+  </div>
+
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
